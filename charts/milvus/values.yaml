@@ -910,3 +910,13 @@ externalKafka:
     mechanisms: PLAIN
     username: ""
     password: ""
+
+securityContext:
+  allowPrivilegeEscalation: false
+  runAsUser: 0
+  capabilities:
+    drop:
+    - ALL
+  runAsNonRoot: true
+  seccompProfile:
+    type: RuntimeDefault
